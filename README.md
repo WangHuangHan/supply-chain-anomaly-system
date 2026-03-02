@@ -21,24 +21,34 @@ This system combines statistical methods and machine learning to identify risks 
 ---
 
 ## 🏗 Architecture Overview
+```bash
 SAP / MRP Data
-↓
+│
+▼
 Ingestion Layer
-↓
+│
+▼
 Feature Engineering
-↓
+│
+▼
 Statistical Detection + ML Detection
-↓
+│
+▼
 Evaluation Layer
-↓
+│
+▼
 Business Risk Rules
-↓
+│
+▼
 Monitoring
-↓
-Dashboard & API
+│
+▼
+Dashboard (Streamlit) & API (FastAPI)
+```
 
 ---
 ## 📂 Project Structure
+```bash
 supply-chain-anomaly-system/
 ├── ingestion/ # SAP data loader
 ├── processing/ # feature engineering
@@ -49,6 +59,7 @@ supply-chain-anomaly-system/
 ├── api/ # FastAPI serving
 ├── dashboard/ # Streamlit visualization
 └── main.py # pipeline entrypoint
+```
 
 ---
 ## ⚙️ Pipeline Execution
@@ -96,18 +107,20 @@ Used by downstream systems for real-time anomaly scoring.
 
 ---
 ## 📈 Roadmap
-✅ Implemented
-- Feature engineering pipeline
-- Statistical anomaly detection
-- Isolation Forest model
-- Evaluation framework
-- Streamlit dashboard
-- FastAPI inference service
-🚧 In Progress
-- Airflow orchestration
-- Automated alert service
-- Email/Slack notifications
-- Container deployment (Docker)
+
+### ✅ Implemented
+- [x] Feature engineering pipeline
+- [x] Statistical anomaly detection
+- [x] Isolation Forest model
+- [x] Evaluation framework (ML vs Statistical)
+- [x] Streamlit dashboard
+- [x] FastAPI inference service
+
+### 🚧 In Progress
+- [ ] Airflow orchestration
+- [ ] Automated alert service
+- [ ] Email / Slack notifications
+- [ ] Container deployment (Docker)
 
 ---
 ## 🧠 Key Engineering Ideas
